@@ -45,8 +45,10 @@ the source, checkpoints, human answers, executed output, and final receipt.
 There is no separate AI API or chatbot hidden in the web app.
 
 The dashboard also permits direct human entry as an accessibility/fallback path.
-The external Discord/Switch invocation must be demonstrated separately before
-claiming that it works. Local synthetic tests are not proof of that connection.
+The real Discord screenshots below document agent invitation, replies, hypothesis
+coaching, a source explanation, and prediction discussion. They do not document
+the final implementation or teach-back, or verify Wispr usage. Local synthetic
+tests and the illustrated video are not proof of Discord transport.
 
 ## Run locally
 
@@ -87,6 +89,40 @@ Start with:
 
 Use `@agent-name` in Discord to address your agent. Complete one checkpoint at a
 time. You can speak an answer with Wispr Flow, review it, and send the text.
+
+## Real Discord / Switch workflow screenshots
+
+These four developer-supplied screenshots show the actual conversation, in order.
+They are separate from the illustrated chat in the narrated video.
+
+**1. Invite the agent and start the guided case.** The agent joins the room,
+confirms it can reply, and asks for the developer's hypothesis rather than
+immediately proposing a fix.
+
+![Switch agent invitation, reply confirmation, and guided case start in Discord](docs/images/discord-01-invite-and-start.png)
+
+**2. Make uncertainty a valid starting point.** The developer says "I dont know"
+and then "pass"; the agent offers a concrete scaffold and records the response.
+
+![Developer expresses uncertainty and receives a scaffold from the Switch agent](docs/images/discord-02-hypothesis-coaching.png)
+
+**3. Explain the actual source before asking for a prediction.** The agent shows
+the buggy function, explains its lines and terms, and asks what appears after
+the requests finish out of order.
+
+![Actual buggy source, plain-language explanation, and prediction checkpoint in Discord](docs/images/discord-03-source-and-prediction.png)
+
+**4. Preserve the prediction, correct the evidence, and compare approaches.**
+The agent records the developer's answer, discusses the outcome, and explains
+the latest-request guard and cancellation alternatives.
+
+![Recorded developer prediction, corrected baseline evidence, and approach comparison](docs/images/discord-04-evidence-and-alternatives.png)
+
+**Evidence correction:** the initial message in screenshots 1 and 2 incorrectly
+says the baseline tests pass. Screenshot 4 explicitly corrects it: **four tests,
+one passing and three failing**. The executed output, not the agent's initial
+claim, is the verification evidence. These screenshots stop at the approach
+discussion; they are not a claim that the live case has been completed.
 
 ## Why Switch is central
 
