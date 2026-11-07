@@ -1,0 +1,17 @@
+AI can help me ship a fix quickly. But when someone asks why I chose that approach, I sometimes struggle to explain it. And at the end of the day, I can forget what I changed and what I learned.
+
+Own the Fix helps developers ship the code while keeping ownership of the decisions. This video uses an illustrated conversation and sample answers, not a live Discord recording.
+
+Here is our reproducible example. I search for C A, then cats. The cats request finishes first. But the older request arrives later and replaces those results. The latest search should own the screen.
+
+Instead of immediately giving me a patch, the workflow asks for my hypothesis. The Switch-connected agent explains the actual source in plain language. Then I predict what will happen before seeing the test evidence.
+
+Next, I compare two approaches: ignore outdated results, or cancel older requests and still check whether their results are current. I choose an approach and explain the tradeoff I accept.
+
+Only then can the tool apply the selected prepared demo patch. The original code has three failing tests. The selected fix passes all four. These are executed tests, not invented numbers.
+
+Before finishing, I explain the change in my own words and name something those tests do not prove. The decision receipt preserves my explanation, choice, and evidence.
+
+The daily recap also checks my GitHub PR activity while the app is running. It keeps PR metadata separate from my recorded learning. It does not guess what I learned from a PR title.
+
+Switch carries the real developer and agent conversation. Wispr Flow can turn my spoken answers into reviewed text. Own the Fix keeps the reasoning with the work: ship the fix, keep the understanding.

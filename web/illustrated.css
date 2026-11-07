@@ -1,0 +1,59 @@
+body.illustrated{padding-top:34px}
+.illustrated>header{margin-left:406px;padding:12px 20px;height:62px}
+.illustrated .header-tags{display:none}
+.illustrated main{margin-left:406px;width:874px;padding:18px 22px;max-width:none}
+.illustrated #progress,.illustrated main>footer,.illustrated main>.history-card{display:none}
+.illustrated .intro{display:none}
+.illustrated .workspace{display:block}
+.illustrated .workspace>aside{display:none}
+.illustrated .work-area{gap:12px}
+.illustrated .card{padding:18px}
+.illustrated .card p,.illustrated .card li{font-size:13px;line-height:1.65}
+.illustrated .checkpoint-card h2{font-size:22px}
+.illustrated .checkpoint-form{margin-top:12px;gap:9px}
+.illustrated textarea{font-size:13px;line-height:1.55}
+.illustrated .voice-hint{display:none}
+.illustrated .options{margin-top:3px;gap:12px}
+.illustrated .option{padding:12px}
+.illustrated .option strong{font-size:13px}
+.illustrated .option p{font-size:12px}
+.illustrated .option small{font-size:11px}
+.illustrated .source-card pre{font-size:13px;margin:12px 0;padding:12px}
+.illustrated .source-card h2{font-size:16px}
+.illustrated .terms{margin-top:4px}
+.illustrated #test-output details{margin-top:12px}
+.illustrated #test-output pre{max-height:250px;overflow:hidden;font-size:11px}
+.illustrated #daily-card{margin-top:0}
+.illustrated #daily-card>p,.illustrated #daily-card>label,.illustrated #daily-card>select,.illustrated #daily-card>#download-recap{display:none}
+.illustrated #daily-card>#github-status{display:block;font-size:13px;color:#b4dbc6}
+.illustrated #daily-card .recap-output{font-size:12px;line-height:1.6;max-height:380px;overflow:hidden}
+.illustrated #toast{display:none}
+.video-disclosure{position:fixed;top:0;left:0;right:0;height:34px;z-index:10001;background:#ead3a5;color:#17213b;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;letter-spacing:.3px}
+.video-chat{position:fixed;left:0;top:34px;width:406px;bottom:0;background:#25262d;border-right:1px solid #47516a;display:flex;flex-direction:row;gap:0;font-size:14px;z-index:10000}
+.chat-rail{width:56px;padding:16px 8px;background:#191a20;flex-shrink:0}
+.chat-server{height:40px;width:40px;border-radius:13px;background:#5865f2;color:white;display:flex;align-items:center;justify-content:center;font-weight:750;margin-bottom:12px}
+.chat-server.secondary{background:#30323d;color:#a8aabc;font-size:20px}
+.chat-room{width:350px;display:flex;flex-direction:column;min-height:0}
+.chat-heading{border-bottom:1px solid #42444f;padding:17px 18px;font-weight:700}
+.chat-heading span{color:#979bac;font-size:20px;margin-right:8px}
+.chat-meta{font-size:11px;line-height:1.65;color:#b1b5c5;background:#202129;padding:12px 18px;border-bottom:1px solid #42444f}
+.chat-meta strong{color:#b7c4ff}
+.chat-messages{padding:20px 16px;flex:1;overflow:hidden}
+.chat-message{display:flex;gap:11px;margin-bottom:24px}
+.chat-avatar{width:32px;height:32px;flex-shrink:0;border-radius:50%;background:#bd92eb;display:flex;align-items:center;justify-content:center;color:#191a20;font-weight:750}
+.chat-avatar.agent{background:#a7bfff}
+.chat-content{min-width:0}
+.chat-author{font-size:13px;font-weight:650;color:#e5d2fa}
+.chat-author.agent{color:#bdccff}
+.chat-author small{margin-left:7px;background:#5865f2;border-radius:3px;font-size:9px;padding:2px 4px;color:white}
+.chat-content p{font-size:14px;line-height:1.65;color:#eaebf1;margin:7px 0 0;overflow-wrap:anywhere}
+.chat-input{margin:0 14px 12px;padding:13px;background:#363843;border-radius:7px;color:#a7aabc;font-size:12px}
+.chat-foot{padding:0 17px 14px;font-size:10px;color:#c8c0ac;line-height:1.6}
+.video-hero{border:1px solid #526891;border-radius:16px;background:#191e29;padding:36px;margin-top:30px}
+.video-hero .eyebrow{font-size:12px}
+.video-hero h1{font-size:44px;margin-top:20px;line-height:1.2}
+.video-hero p{font-size:18px;line-height:1.8;color:#bac7da}
+.video-hero .hero-rule{margin-top:24px;border-left:3px solid #b4dbc6;padding-left:18px;font-size:17px;color:#b4dbc6}
+.video-summary pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.7 -apple-system,sans-serif;color:#d6e5dd}
+.video-issue .scenario{display:grid;grid-template-columns:1fr 1fr}
+.video-issue .scenario div{font-size:13px}

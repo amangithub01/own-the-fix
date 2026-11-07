@@ -37,7 +37,7 @@ final class Walkthrough: NSObject, WKNavigationDelegate, WKScriptMessageHandler 
             fflush(stdout)
             return
         }
-        guard body.hasPrefix("CAPTURE:"), let index = Int(body.dropFirst(8)), (1...8).contains(index) else { return }
+        guard body.hasPrefix("CAPTURE:"), let index = Int(body.dropFirst(8)), (1...9).contains(index) else { return }
         view.takeSnapshot(with: nil) { [weak self] image, error in
             guard let self else { return }
             guard let image, let data = image.tiffRepresentation, let bitmap = NSBitmapImageRep(data: data),
@@ -53,7 +53,7 @@ final class Walkthrough: NSObject, WKNavigationDelegate, WKScriptMessageHandler 
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        let script = """
+        let defaultScript = """
         const until=async fn=>{for(let i=0;i<250;i++){if(fn())return;await new Promise(r=>setTimeout(r,100));}throw Error('Walkthrough checkpoint timed out');};
         const pause=()=>new Promise(r=>setTimeout(r,350));
         const banner=document.createElement('div');
@@ -99,9 +99,14 @@ final class Walkthrough: NSObject, WKNavigationDelegate, WKScriptMessageHandler 
         if(testErrors.length)throw Error(testErrors.join('; '));
         return true;
         """
+        let script: String
+        if let custom = ProcessInfo.processInfo.environment["OWN_FIX_CAPTURE_SCRIPT"] {
+            do { script = "return await (\(try String(contentsOfFile: custom, encoding: .utf8)))();" }
+            catch { finish(false, error.localizedDescription); return }
+        } else { script = defaultScript }
         webView.callAsyncJavaScript(script, arguments: [:], in: nil, in: .page) { [weak self] result in
             switch result {
-            case .success: self?.finish(true, "Captured eight labelled prototype scenes")
+            case .success: self?.finish(true, "Captured labelled prototype scenes")
             case .failure(let error):
                 self?.finish(false, (error as NSError).userInfo["WKJavaScriptExceptionMessage"] as? String ?? error.localizedDescription)
             }

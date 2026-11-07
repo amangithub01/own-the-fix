@@ -242,6 +242,30 @@ It does not claim to test a real Discord conversation.
 
 ## Submission demonstration
 
+[Watch/download the Cartesia-narrated walkthrough](demo/own-the-fix-cartesia.mp4).
+The video uses developer-supplied Cartesia-synthesized
+narration with a clearly labelled Discord-style illustration alongside
+the actual local dashboard. All human answers are samples, the selected
+patch is prepared, and the baseline/fix tests execute in an isolated case.
+The GitHub scene makes a real read-only check of the configured public demo
+repository; the displayed daily recap is an excerpt of the saved full file.
+Neither this video nor its synthetic chat proves live Discord transport or
+Wispr microphone usage. The original voice audio stays outside the repository.
+Script-based captions use estimated sentence timing, not forced alignment.
+
+To regenerate with your own exported narration and the nine-paragraph script:
+
+```bash
+node tools/create-illustrated-video.mjs /path/narration.wav /path/script.txt /path/output
+```
+
+The script is in `demo/cartesia-narration.txt`; sidecar captions are in
+`demo/cartesia-captions.srt` and also embedded in the MP4.
+
+The illustrated GitHub scene currently targets `amangithub01/own-the-fix`
+using the signed-in GitHub CLI account. Voice services have their own data
+processing terms; this renderer only processes the exported audio locally.
+
 `demo/own-the-fix-prototype.mp4` is a narrated snapshot walkthrough using
 isolated sample answers and real local verification. Every scene is labelled:
 it is **not live Discord footage or evidence of actual Wispr dictation**.

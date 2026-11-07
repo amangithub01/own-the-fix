@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:03,336
+AI can help me ship a fix quickly.
+
+2
+00:00:03,336 --> 00:00:09,592
+But when someone asks why I chose that approach, I sometimes struggle to explain it.
+
+3
+00:00:09,592 --> 00:00:16,682
+And at the end of the day, I can forget what I changed and what I learned.
+
+4
+00:00:16,682 --> 00:00:22,520
+Own the Fix helps developers ship the code while keeping ownership of the decisions.
+
+5
+00:00:22,520 --> 00:00:28,359
+This video uses an illustrated conversation and sample answers, not a live Discord recording.
+
+6
+00:00:28,359 --> 00:00:30,444
+Here is our reproducible example.
+
+7
+00:00:30,444 --> 00:00:33,364
+I search for C A, then cats.
+
+8
+00:00:33,364 --> 00:00:35,449
+The cats request finishes first.
+
+9
+00:00:35,449 --> 00:00:39,619
+But the older request arrives later and replaces those results.
+
+10
+00:00:39,619 --> 00:00:42,539
+The latest search should own the screen.
+
+11
+00:00:42,539 --> 00:00:47,960
+Instead of immediately giving me a patch, the workflow asks for my hypothesis.
+
+12
+00:00:47,960 --> 00:00:52,131
+The Switch-connected agent explains the actual source in plain language.
+
+13
+00:00:52,131 --> 00:00:56,718
+Then I predict what will happen before seeing the test evidence.
+
+14
+00:00:56,718 --> 00:01:05,059
+Next, I compare two approaches: ignore outdated results, or cancel older requests and still check whether their results are current.
+
+15
+00:01:05,059 --> 00:01:09,229
+I choose an approach and explain the tradeoff I accept.
+
+16
+00:01:09,229 --> 00:01:13,817
+Only then can the tool apply the selected prepared demo patch.
+
+17
+00:01:13,817 --> 00:01:16,736
+The original code has three failing tests.
+
+18
+00:01:16,736 --> 00:01:19,238
+The selected fix passes all four.
+
+19
+00:01:19,238 --> 00:01:22,158
+These are executed tests, not invented numbers.
+
+20
+00:01:22,158 --> 00:01:29,665
+Before finishing, I explain the change in my own words and name something those tests do not prove.
+
+21
+00:01:29,665 --> 00:01:33,418
+The decision receipt preserves my explanation, choice, and evidence.
+
+22
+00:01:33,418 --> 00:01:39,257
+The daily recap also checks my GitHub PR activity while the app is running.
+
+23
+00:01:39,257 --> 00:01:43,010
+It keeps PR metadata separate from my recorded learning.
+
+24
+00:01:43,010 --> 00:01:47,598
+It does not guess what I learned from a PR title.
+
+25
+00:01:47,598 --> 00:01:50,934
+Switch carries the real developer and agent conversation.
+
+26
+00:01:50,934 --> 00:01:55,104
+Wispr Flow can turn my spoken answers into reviewed text.
+
+27
+00:01:55,104 --> 00:02:01,360
+Own the Fix keeps the reasoning with the work: ship the fix, keep the understanding.
