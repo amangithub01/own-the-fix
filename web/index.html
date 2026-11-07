@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Own the Fix — ship the fix, keep the understanding</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+  <header><a class="brand" href="/"><span class="brand-icon">of.</span><span>own the fix<small>Ship the fix. Keep the understanding.</small></span></a><div class="header-tags"><span class="tag">GUIDED MODE</span><span class="tag voice-tag">WISPR-FRIENDLY TEXT INPUT</span></div></header>
+  <main>
+    <section class="intro"><div><span class="eyebrow">A SWITCH HUMAN–AGENT WORKFLOW</span><h1>The code ships.<br><em>You stay in the loop.</em></h1><p>Not another AI explanation to skim. A space to form a hypothesis,<br>challenge a fix, and leave with reasoning you can defend.</p></div><div class="intro-note"><span class="note-label">THE RULE</span><p>The agent cannot apply the demo patch until your hypothesis, prediction, and approach choice are recorded.</p><small>Dictate with Wispr Flow, review the text, then send. This app receives text—not microphone audio.</small></div></section>
+    <nav id="progress" aria-label="Guided workflow progress"></nav>
+    <div class="workspace">
+      <aside>
+        <section class="card"><span class="eyebrow">THE ISSUE</span><h2>Search results travel<br>back in time.</h2><p id="issue-description"></p><div id="scenario" class="scenario"></div><h3>Define “done” before fixing</h3><ul id="requirements"></ul><span class="case-label">SELF-CONTAINED JAVASCRIPT CASE</span></section>
+        <section class="card thinking-card"><span class="eyebrow">YOUR THINKING, PRESERVED</span><div id="human-notes"></div><p class="quiet">“I don’t know yet” is a valid starting point. No scores, no claims about your cognitive ability.</p></section>
+      </aside>
+      <div class="work-area">
+        <section class="card checkpoint-card"><div class="checkpoint-header"><span id="actor-label" class="tag"></span><span id="stage-label"></span></div><h2 id="checkpoint-title"></h2><p id="checkpoint-description"></p><div id="checkpoint"></div><div class="voice-hint">Speak your own answer with Wispr Flow in Discord or this field. Review its wording before submitting.</div></section>
+        <section class="card source-card"><div class="section-heading"><h2>Read the actual slice</h2><span class="tag">search.mjs</span></div><pre id="source"></pre><div id="explanation"></div></section>
+        <section class="card" id="evidence-card" hidden><div class="section-heading"><h2>Evidence, not reassurance</h2><span class="tag">EXECUTED TESTS</span></div><div id="test-summary"></div><div id="test-output"></div></section>
+      </div>
+    </div>
+    <section class="card history-card"><div class="section-heading"><h2>The decision trail</h2><span class="quiet">Source labels describe tool invocation, not independently authenticated authorship.</span></div><div id="history"></div></section>
+    <section class="card history-card" id="daily-card">
+      <div class="section-heading"><h2>What I did and learned today</h2><span class="tag">READ-ONLY GITHUB · IST</span></div>
+      <p>Detect your PRs created or updated today. Keep your own learning separate from GitHub activity. Checks run every five minutes while this app is running.</p>
+      <form id="github-connect" class="checkpoint-form">
+        <label for="github-repository">Repository to monitor using the account signed into GitHub CLI</label>
+        <input id="github-repository" name="repository" placeholder="owner/repository" required maxlength="200">
+        <button class="primary" type="submit">Connect repository & check my PRs</button>
+      </form>
+      <p id="github-status" role="status"></p>
+      <div class="recap-actions">
+        <button id="github-sync" type="button">Check PRs now</button>
+        <button id="copy-pr" type="button">Copy local fix PR summary</button>
+        <button id="copy-recap" type="button">Copy today's recap</button>
+      </div>
+      <pre id="daily-recap" class="recap-output"></pre>
+      <label for="recap-day">Saved daily recaps</label>
+      <select id="recap-day" aria-label="Saved recap date"></select>
+      <button id="download-recap" type="button">Download selected recap</button>
+      <p class="quiet">No PRs are created or edited. No repository code, diffs, comments, or microphone audio are fetched. PR updates do not prove you worked or learned; recaps quote your completed local teach-back, without assuming it belongs to a GitHub PR.</p>
+    </section>
+    <footer><span>Local case data · AI processing follows your Switch agent’s provider policy.</span><span>Inspired by Addy Osmani’s writing on maintaining critical thinking.</span></footer>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

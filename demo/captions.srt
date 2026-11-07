@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:14,354
+Own the Fix helps developers ship a fix without surrendering the decisions behind it. This is a narrated prototype walkthrough with sample answers and a local command tool. It is not a recording of live Discord interaction.
+
+2
+00:00:14,354 --> 00:00:27,927
+The case begins before the proposed solution. A developer gives a rough hypothesis about search requests finishing out of order. Saying I do not know is also valid. The workflow does not grade the answer.
+
+3
+00:00:27,927 --> 00:00:44,577
+The agent explains the actual code slice, including unfamiliar terms and real source lines. Await pauses one invocation, not every search. Every completed request currently updates the display without checking whether its query is still current.
+
+4
+00:00:44,577 --> 00:00:58,638
+Before revealing verification evidence, the developer predicts the result of a controlled sequence. Two requests start in order but finish in reverse. Their prediction is preserved separately from the agent explanation.
+
+5
+00:00:58,638 --> 00:01:16,585
+The developer compares two viable approaches. Cancellation can stop cooperating work, but a latest request guard also works when cancellation is unavailable. In this sample, the developer chooses the guard and explicitly accepts that older requests still use resources.
+
+6
+00:01:16,585 --> 00:01:32,414
+Only after those checkpoints does the tool apply the selected prepared demo patch. These results are real: the original case has three failing tests, and the selected fix passes all four. The command and output remain available to inspect.
+
+7
+00:01:32,414 --> 00:01:46,428
+The developer then explains the fix in their own words and identifies what the checks do not prove. Controlled promise tests are not evidence of complete production interface behavior. A green check is not the whole argument.
+
+8
+00:01:46,428 --> 00:02:06,918
+The final receipt preserves the hypothesis, prediction, choice, alternative, code, and executed verification. Switch carries the real human and agent conversation in the intended workflow. Wispr can supply reviewed dictated text. Neither integration is impersonated in this sample walkthrough.

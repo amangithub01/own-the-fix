@@ -1,0 +1,13 @@
+{
+  "name": "own-the-fix",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A Switch workflow that keeps developers in the reasoning loop of an AI-assisted fix.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.mjs --open",
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check lib/workflow.mjs && node --check lib/github.mjs && node --check server.mjs && node --check tools/fix.mjs && node --check web/app.js"
+  }
+}
